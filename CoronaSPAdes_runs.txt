@@ -1,0 +1,1 @@
+coronaspades.py -1 Sars_SL3_R1_171127.fastq -2 Sars_SL3_R2_171127.fastq -o Sars_SL3_R1.coronaspades_default_asm -t 32

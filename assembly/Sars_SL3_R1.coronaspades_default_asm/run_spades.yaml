@@ -1,0 +1,103 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K49
+  args:
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K49/configs/config.info
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K49/configs/mda_mode.info
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K49/configs/meta_mode.info
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K49/configs/rnaviral_mode.info
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K49/configs/hmm_mode.info
+  config_dir: K49
+  del_after: []
+  output_files: []
+  path: /home/biouser01/apps/SPAdes-3.15.0-Linux/bin/spades-core
+  short_name: k49
+- STAGE: K73
+  args:
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/configs/config.info
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/configs/mda_mode.info
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/configs/meta_mode.info
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/configs/rnaviral_mode.info
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/configs/hmm_mode.info
+  config_dir: K73
+  del_after: []
+  output_files: []
+  path: /home/biouser01/apps/SPAdes-3.15.0-Linux/bin/spades-core
+  short_name: k73
+- STAGE: Copy files
+  args:
+  - /home/biouser01/apps/SPAdes-3.15.0-Linux/share/spades/spades_pipeline/scripts/copy_files.py
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/before_rr.fasta
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/before_rr.fasta
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/assembly_graph_after_simplification.gfa
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/assembly_graph_after_simplification.gfa
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/final_contigs.fasta
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/contigs.fasta
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/first_pe_contigs.fasta
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/first_pe_contigs.fasta
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/strain_graph.gfa
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/strain_graph.gfa
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/scaffolds.fasta
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/scaffolds.fasta
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/scaffolds.paths
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/scaffolds.paths
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/assembly_graph_with_scaffolds.gfa
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/assembly_graph_with_scaffolds.gfa
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/assembly_graph.fastg
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/assembly_graph.fastg
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/final_contigs.paths
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/contigs.paths
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/gene_clusters.fasta
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/gene_clusters.fasta
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/bgc_statistics.txt
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/bgc_statistics.txt
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/K73/domain_graph.dot
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/domain_graph.dot
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_za8xwx36
+  output_files: []
+  path: /home/biouser01/miniconda3/envs/rnaseq/bin/python
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /home/biouser01/apps/SPAdes-3.15.0-Linux/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/scaffolds.fasta
+  - --misc_dir
+  - /mnt/1TB_0/Data/RaTG13/Sars_SL3_R1.coronaspades_default_asm/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: /home/biouser01/miniconda3/envs/rnaseq/bin/python
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  output_files: []
+  path: 'true'
+  short_name: terminate

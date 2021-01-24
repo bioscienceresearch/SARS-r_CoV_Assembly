@@ -1,0 +1,7 @@
+- "left reads":
+  - "/mnt/1TB_0/Data/RaTG13/Sars_SL3_R1_171127.fastq"
+  "number": !!int "1"
+  "orientation": "fr"
+  "right reads":
+  - "/mnt/1TB_0/Data/RaTG13/Sars_SL3_R2_171127.fastq"
+  "type": "paired-end"

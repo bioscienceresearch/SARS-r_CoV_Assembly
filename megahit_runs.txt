@@ -1,0 +1,8 @@
+wget https://sra-pub-sars-cov2.s3.amazonaws.com/sra-src/SRR11085797/Sars_SL3_R1_171127.fastq.gz
+wget https://sra-pub-sars-cov2.s3.amazonaws.com/sra-src/SRR11085797/Sars_SL3_R2_171127.fastq.gz
+gunzip Sars_SL3_R1_171127.fastq.gz
+gunzip Sars_SL3_R2_171127.fastq.gz
+
+megahit -1 Sars_SL3_R1_171127.fastq -2 Sars_SL3_R2_171127.fastq -o Sars_SL3.megahit_asm
+megahit -1 Sars_SL3_R1_171127.fastq -2 Sars_SL3_R2_171127.fastq --k-max 79 -o Sars_SL3.megahit_k79max_asm
+megahit -1 Sars_SL3_R1_171127.fastq -2 Sars_SL3_R2_171127.fastq --k-step=10 --no-mercy -o Sars_SL3.megahit_kstep10_nomercy_asm
